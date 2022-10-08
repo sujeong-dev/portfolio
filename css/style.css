@@ -80,7 +80,6 @@ h2 {
 h3 {
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
-    color: var(--color-black);
     margin: 8px 0;
 }
 
@@ -110,6 +109,7 @@ p {
 .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
+    color: var(--color-white);
 }
 .navbar__menu {
     display: flex;
@@ -121,6 +121,8 @@ p {
     padding: 10px;
     margin: 0 10px;
     cursor: pointer;
+    color: var(--color-white);
+
 }
 
 /*
@@ -266,4 +268,121 @@ p {
 .skill__value {
     height: 4px;
     background-color: var(--color-beige);
+}
+
+/* work */
+#work {
+    padding: 90px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.work__categories {
+    margin: 30px;
+}
+.category__btn {
+    border: 1px solid var(--color-green);
+    border-radius: 4px;
+    font-size: var(--font-regular);
+    padding: 8px 50px;
+}
+
+.category__btn:active,
+.category__btn:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.category__count {
+    border: 2px solid var(--color-blue);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 30px;
+    background-color: var(--color-green);
+    margin: 0 2px;
+}
+
+.work__projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    /* .project__description이 static이 아닌 부모노드를 찾기 위해서 */
+    position: relative;
+    margin: 2px;
+    background-color: var(--color-light-white );
+}
+
+.project__description {
+    position : absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    opacity: 0;
+    transition: all 300ms ease-in; 
+}
+
+.project__description h3 {
+    color: var(--color-white);
+}
+
+.project__description h3:after {
+    /* 선 생성 */
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-white);
+    /* ****** */
+    position: relative;
+    left: 43%;
+    margin-top: 4px;
+}
+
+.project:hover .project__description{
+    opacity: 0.8;
+}
+
+#footer {
+    background-color: var(--color-blue);
+    text-align: center;
+}
+
+.contact__links {
+    font-size: var(--font-xlarge);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 400px;
+}
+
+.contact__velog {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: block;
+}
+
+.contact__copyright {
+    display: flex;
+    justify-content: center;
+}
+
+.fa-copyright {
+    margin: 10px;
+    font-size: var(--font-small);
 }
