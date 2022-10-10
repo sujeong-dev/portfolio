@@ -187,6 +187,18 @@ p {
   justify-content: center;
 }
 
+.home__introtext::after {
+  content: "|";
+  animation: blink 320ms step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: var(--color-white);
+    opacity: 0;
+  }
+}
+
 /* about */
 #about {
   padding: 90px;
