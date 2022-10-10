@@ -15,7 +15,6 @@ innerHTML은 XSS 공격에 취약하므로 가급적 사용금지xxxxxx
 const typingInterval = setInterval(() => {
   putWord += content[index++];
   introText.innerText = putWord;
-  console.log(introText.innerText);
   // introText.innerText += content[index++];
   // 위의 코드처럼 진행 시 띄어쓰기가 나올 경우 ex) "저는 "까지 입력된 innerText를 가져올 시 띄어쓰기가 trim됨
 }, 300);
