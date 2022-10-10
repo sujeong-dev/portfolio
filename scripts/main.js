@@ -5,15 +5,19 @@
 const introText = document.querySelector(".home__introtext");
 const content = "안녕하세요.\n저는 구수정입니다 :)";
 let index = 0;
+let putWord = "";
 /* 
 textContent는 <script>와 <style> 요소를 포함한 모든 요소의 콘텐츠를 가져옴 -> 따라서 <br/>태그를 넣어줄 수가 없음
 innerText는 렌더링이 되어 "사람이 읽을 수 있는" 요소만 처리합니다.
 innerHTML은 XSS 공격에 취약하므로 가급적 사용금지xxxxxx 
 */
-console.log(content.length);
 // 0.3초마다 한글자씩 .home__introtext에 들어가짐
 const typingInterval = setInterval(() => {
-  introText.innerText += content[index++];
+  putWord += content[index++];
+  introText.innerText = putWord;
+  console.log(introText.innerText);
+  // introText.innerText += content[index++];
+  // 위의 코드처럼 진행 시 띄어쓰기가 나올 경우 ex) "저는 "까지 입력된 innerText를 가져올 시 띄어쓰기가 trim됨
 }, 300);
 // 문구가 끝나면 함수호출 중단
 setTimeout(() => {
