@@ -1,198 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>구수정 (sujeong)</title>
-    <meta name="description" content="자기소개서">
-    <meta name="author" content="구수정">
-    <script src="https://kit.fontawesome.com/91336a7a70.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png"/>
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description" content="자기소개서" />
+    <meta name="author" content="구수정" />
+    <script
+      src="https://kit.fontawesome.com/91336a7a70.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script defer src="./scripts/main.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <script></script>
     <!--navbar-->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <i class="fab fa-diaspora"></i>
-            <a href="#">sujeong</a>
-        </div>
-        <div class="navbar__menu">
-            <ul class="navbar__menu">
-                <a href="#"><li class="navbar__menu__item active">Home</li></a>
-                <a href="#about"><li class="navbar__menu__item">About</li></a>
-                <a href="#skill"><li class="navbar__menu__item">Skill</li></a>
-                <a href="#work"><li class="navbar__menu__item">Portfolio</li></a>
-                <li class="navbar__menu__item">contact</li>
-            </ul>
-        </div>
+      <div class="navbar__logo">
+        <img src="./img/favicon.png" alt="" class="navbar__logo__img" />
+        <a href="#">sujeong</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item selected" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skill">Skill</li>
+        <li class="navbar__menu__item" data-link="#work">Portfolio</li>
+        <li class="navbar__menu__item" data-link="#footer">contact</li>
+      </ul>
+      <!-- 미디어쿼리 시 메뉴리스트 합쳐줄 토글버튼 -->
+      <button class="navbar__toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
     <!-- intro -->
     <section id="home" class="section">
-        <img src="./img/profile.png" alt="프로필사진" class="home__avatar">
+      <div class="home__container">
+        <img src="./img/profile.png" alt="프로필사진" class="home__avatar" />
         <div class="home__title">
-            <h2>안녕하세요.<br>저는 구수정입니다 :)</h2>
+          <h2 class="home__introtext"></h2>
         </div>
-        <!-- <h2 class="home__description">코드 간결화를 하기위해 노력하는, 여러사람들과 협력하는, 소통하는 개발자</h2> -->
+      </div>
+      <!-- <h2 class="home__description">코드 간결화를 하기위해 노력하는, 여러사람들과 협력하는, 소통하는 개발자</h2> -->
     </section>
     <!-- about -->
     <section id="about" class="section">
-        <h1>About Me</h1>
-        <div class="about__me">
-            <div class="about__left">
-                <img src="./img/profile.png" alt="프로필사진" class="about__image">
-            </div>
-            <div class="about__right">
-                <ul class="about__info">
-                    <li>구수정</li>
-                    <li><span>19980104</span></li>
-                    <li><span>인하공업전문대학 컴퓨터시스템과<br>
-                        <p>2016.02-2019.02</p></span>
-                        <span>방송통신대학교 컴퓨터과학과<br>
-                        <p>2019.08-Until Now</p></span>
-                    </li>
-                    <li><span>(주)인포전스<br>
-                        <p>2018.09-2022.06</p></span></li>
-                </ul>
-            </div>
+      <h1>About Me</h1>
+      <div class="about__me">
+        <div class="about__left">
+          <img src="./img/profile.png" alt="프로필사진" class="about__image" />
         </div>
+        <div class="about__right">
+          <ul class="about__info">
+            <li>구수정</li>
+            <li><span>19980104</span></li>
+            <li>
+              <span>
+                인하공업전문대학 컴퓨터시스템과
+                <br />
+                <p>2016.02-2019.02</p>
+              </span>
+              <span>
+                방송통신대학교 컴퓨터과학과
+                <br />
+                <p>2019.08-Until Now</p>
+              </span>
+            </li>
+            <li>
+              <span>
+                (주)인포전스
+                <br />
+                <p>2018.09-2022.06</p>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
     <!-- skills -->
     <section id="skill" class="section">
-        <h1>Skill</h1>
-        <div class="skill__majors">
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="major__title">Front-End</div>
-                <div class="major__description">HTML, CSS, React, JavaScript</div>
-            </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="major__title">Back-End</div>
-                <div class="major__description">Java</div>
-            </div>
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="major__title">ETC</div>
-                <div class="major__description">Git, Figma</div>
-            </div>
+      <h1>Skill</h1>
+      <div class="skill__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="major__title">Front-End</div>
+          <div class="major__description">
+            HTML, CSS,
+            <br />
+            React, JavaScript
+          </div>
         </div>
-        <div class="skillset">
-                <!-- <h3 class="skillset_title">skills</h3> -->
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>HTML</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value" style="width: 60%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>CSS</span>
-                        <span>60%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>React</span>
-                        <span>10%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>JavaScript</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>Java</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="major__title">Back-End</div>
+          <div class="major__description">Java</div>
         </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="major__title">ETC</div>
+          <div class="major__description">Git, Figma</div>
+        </div>
+      </div>
+      <div class="skillset">
+        <!-- <h3 class="skillset_title">skills</h3> -->
+        <div class="skill">
+          <div class="skill_description">
+            <span>HTML</span>
+            <span>60%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill_description">
+            <span>CSS</span>
+            <span>60%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill_description">
+            <span>React</span>
+            <span>10%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill_description">
+            <span>JavaScript</span>
+            <span>70%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill_description">
+            <span>Java</span>
+            <span>50%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value"></div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- work -->
     <section id="work" class="section">
-        <h1>Portfolio</h1>
-        <div class="work__categories">
-            <button class="category__btn active">
-                all
-                <span class="category__count">6</span>
-            </button>
-            <button class="category__btn">
-                front<span class="category__count">3</span>
-            </button>
-            <button class="category__btn">
-                back<span class="category__count">3</span>
-            </button>
-        </div>
-        <div class="work__projects">
-            <a href="" class="project" target="blank">
-                <img src="./img/project1.png" alt="프로젝트1" class="project__img">
-                <div class="project__description">
-                    <h3>자기소개 홈페이지</h3>
-                    <span>html, css, 바닐라 자바스크립트를 <br>이용한 자기소개페이지</span>
-                </div>
-            </a>
-            <a href="https://github.com/sujeong-dev/portfolio" class="project" target="blank">
-                <img src="./img/project2.png" alt="프로젝트2" class="project__img">
-                <div class="project__description">
-                    <h3>자기소개 홈페이지</h3>
-                    <span>HTML, CSS, 바닐라자바스크립트를 <br>이용한 자기소개페이지</span>
-                </div>
-            </a>
-            <a href="" class="project" target="blank">
-                <img src="./img/project3.png" alt="프로젝트3" class="project__img">
-                <div class="project__description">
-                    <h3>자기소개 홈페이지</h3>
-                    <span>html, css, 바닐라 자바스크립트를 <br>이용한 자기소개페이지</span>
-                </div>
-            </a>
-        </div>
+      <h1>Portfolio</h1>
+      <div class="work__categories">
+        <button class="category__btn selected" data-filter="*">
+          all
+          <span class="category__count">3</span>
+        </button>
+        <button class="category__btn" data-filter="front">
+          front
+          <span class="category__count">2</span>
+        </button>
+        <button class="category__btn" data-filter="back">
+          back
+          <span class="category__count">1</span>
+        </button>
+      </div>
+      <div class="work__projects">
+        <a
+          href="https://github.com/sujeong-dev/portfolio"
+          class="project"
+          target="blank"
+          data-type="front"
+        >
+          <img src="./img/project1.png" alt="프로젝트1" class="project__img" />
+          <div class="project__description">
+            <h3>자기소개 홈페이지</h3>
+            <span>
+              html, css, 바닐라 자바스크립트를
+              <br />
+              이용한 자기소개페이지
+            </span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/sujeong-dev/portfolio"
+          class="project"
+          target="blank"
+          data-type="front"
+        >
+          <img src="./img/project2.png" alt="프로젝트2" class="project__img" />
+          <div class="project__description">
+            <h3>자기소개 홈페이지</h3>
+            <span>
+              HTML, CSS, 바닐라자바스크립트를
+              <br />
+              이용한 자기소개페이지
+            </span>
+          </div>
+        </a>
+        <a href="" class="project" target="blank" data-type="back">
+          <img src="./img/project3.png" alt="프로젝트3" class="project__img" />
+          <div class="project__description">
+            <h3>자기소개 홈페이지</h3>
+            <span>
+              html, css, 바닐라 자바스크립트를
+              <br />
+              이용한 자기소개페이지
+            </span>
+          </div>
+        </a>
+      </div>
     </section>
     <footer id="footer">
-        <div class="contact__links">
-            <a href="mailto:9sujeong.dev@gmail.com" target="_blank">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="https://github.com/sujeong-dev" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://velog.io/@sujeong_dev">
-                <img class="contact__velog" src="./img/icon-velog.jpg" alt="벨로그 이미지" />
-            </a>
-        </div>
-        <div class="contact__copyright">
-            <i class="fa-regular fa-copyright"></i>
-            <p>sujeong</p>
-        </div>
+      <div class="contact__links">
+        <a href="mailto:9sujeong.dev@gmail.com" target="_blank">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://github.com/sujeong-dev" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://velog.io/@sujeong_dev">
+          <img
+            class="contact__velog"
+            src="./img/icon-velog.jpg"
+            alt="벨로그 이미지"
+          />
+        </a>
+      </div>
+      <div class="contact__copyright">
+        <i class="fa-regular fa-copyright"></i>
+        <p>sujeong</p>
+      </div>
     </footer>
+
+    <button class="top-btn">
+      <i class="fa-solid fa-circle-up"></i>
+    </button>
     <!-- <section id="contact" class="section">
         <h1 class="contact__title">contract me</h1>
         <a href="mailto:9sujeong.dev@gmail.com"><h2 class="contact__email">9sujeong.dev@gmail.com</h2></a>
@@ -205,5 +264,5 @@
             </a>
         </div
     </section> -->
-</body>
+  </body>
 </html>
