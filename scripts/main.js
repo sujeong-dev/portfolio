@@ -15,7 +15,6 @@ innerHTML은 XSS 공격에 취약하므로 가급적 사용금지xxxxxx
 // 0.3초마다 한글자씩 .home__introtext에 들어가짐
 const typingInterval = setInterval(() => {
   putWord += content[index++];
-  console.log(putWord);
   introText.innerText = putWord;
   // introText.innerText += content[index++];
   // 위의 코드처럼 진행 시 띄어쓰기가 나올 경우 ex) "저는 "까지 입력된 innerText를 가져올 시 띄어쓰기가 trim됨
@@ -82,7 +81,6 @@ const projectContainer = document.querySelector(".work__projects");
 categoryBtn.addEventListener("click", (e) => {
   // 선택된 버튼에 스타일링
   const selected = document.querySelector(".category__btn.selected");
-  console.log(selected);
   selected.classList.remove("selected");
   const target =
     e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
