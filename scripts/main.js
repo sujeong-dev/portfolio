@@ -107,6 +107,14 @@ categoryBtn.addEventListener("click", (e) => {
   }, 300);
 });
 
+/* 해당 화면에 있을 때 navbar메뉴 활성화시키기 */
+/*
+1. 모든 섹션 요소들과 메뉴아이템들을 가지고온다.
+2. intersectionObserver를 이용하여 요소들을 관찰한다.
+3. 보여지는 섹션의 해당 메뉴를 활성화시킨다.
+음...스크롤의 위치가 섹션의 id인 경우의 메뉴의 id를 활성화?
+*/
+
 /* 해당 목적지까지 스크롤 이동 */
 function scrollinto(selector) {
   const destination = document.querySelector(selector);
